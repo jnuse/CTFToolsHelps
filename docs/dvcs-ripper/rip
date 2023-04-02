@@ -1,0 +1,6 @@
+rip-git.pl -v -u http://www.example.com/.git/
+ignore ssl
+rip-git.pl -s -v -u http://www.example.com/.git/
+
+rip-hg.pl -v -u http://www.example.com/.hg/
+rip-svn.pl -v -u http://www.example.com/.svn/

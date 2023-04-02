@@ -1,0 +1,17 @@
+sqlmap -u 
+--dbs
+--tables
+--columns
+--dump
+--data <postdata> 
+--cookie <cookie>
+--second-url
+--batch
+--level
+1,默认
+2，cookie注入
+3.refer注入
+4，UA注入
+5.HTTP host
+--tamper
+

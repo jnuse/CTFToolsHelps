@@ -1,0 +1,7 @@
+基础爬虫爬取
+xray webscan --basic-crawler <url> --html-output vuln.html
+使用 HTTP 代理进行被动扫描
+xray webscan --listen 127.0.0.1:7777 --html-output proxy.html
+127.0.0.1:7777 -> Burp -> User options -> Upstream Proxy Servers -> add
+Destination host -> *
+Proxy -> 127.0.0.1:7777
